@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Krainy Geograficzne</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f7f7f7;
+        color: #333;
+      }
+      .container {
+        max-width: 900px;
+        margin: 30px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .container > div {
+        animation: fadeIn 0.8s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      h2 {
+        border-bottom: 2px solid #0077cc;
+        padding-bottom: 10px;
+      }
+      p {
+        text-align: justify;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-top: 15px;
+      }
+      .button-group {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .button-group button {
+        margin: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background: #0077cc;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+      .button-group button:hover {
+        background: #005fa3;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="home">
+        <h2>Witamy na stronie Krain Geograficznych</h2>
+        <p>
+          Ta strona została stworzona, aby przybliżyć różnorodne regiony
+          geograficzne Polski. Znajdziesz tutaj rozbudowane opisy dziesięciu
+          krain – od majestatycznych gór, przez malownicze niziny, aż po
+          urokliwe pobrzeża i wyżyny. Każdy region został dokładnie opisany pod
+          kątem przyrody, historii, kultury oraz atrakcji turystycznych.
+          Zapraszamy do zapoznania się z poszczególnymi regionami.
+        </p>
+        <div class="button-group">
+          <button onclick="return showPage(event, 'karpaty')">Karpaty</button>
+          <button onclick="return showPage(event, 'sudety')">Sudety</button>
+          <button onclick="return showPage(event, 'pojezierza')">
+            Pojezierza
+          </button>
+          <button onclick="return showPage(event, 'wyzyny')">Wyżyny</button>
+          <button onclick="return showPage(event, 'niziny')">Niziny</button>
+          <button onclick="return showPage(event, 'pobrzeza')">Pobrzeża</button>
+          <button onclick="return showPage(event, 'gory_swietokrzyskie')">
+            Góry Świętokrzyskie
+          </button>
+          <button onclick="return showPage(event, 'podkarpacie')">
+            Podkarpacie
+          </button>
+          <button onclick="return showPage(event, 'mazowsze')">Mazowsze</button>
+          <button onclick="return showPage(event, 'pomorze')">Pomorze</button>
+        </div>
+      </div>
+
+      <div id="karpaty" class="hidden">
+        <h2>Karpaty</h2>
+        <p>
+          Karpaty to rozległy system górski rozciągający się przez Europę
+          Środkową, obejmujący nie tylko Polskę, ale także Czechy, Słowację,
+          Ukrainę, Rumunię i Serbię. W polskiej części dzielą się na trzy główne
+          jednostki: Karpaty Zachodnie, Karpaty Wschodnie oraz Karpaty
+          Południowe. Najbardziej znanym pasmem są Tatry, gdzie znajduje się
+          najwyższy szczyt – Rysy (2499 m n.p.m.). Region ten przyciąga rocznie
+          tysiące turystów, miłośników wędrówek, narciarzy i badaczy przyrody.
+          Niezliczone szlaki, malownicze doliny i unikalna fauna oraz flora
+          czynią Karpaty miejscem niezwykle atrakcyjnym.
+        </p>
+        <p>
+          Flora i fauna Karpat są niezwykle zróżnicowane. W lasach porastających
+          zbocza gór dominują sosny, świerki, jodły i brzozy, które tworzą
+          gęstą, zieloną osłonę. Region jest siedliskiem dla wielu gatunków
+          zwierząt, w tym niedźwiedzi brunatnych, wilków, rysi, saren oraz
+          dzików. Liczne parki narodowe, takie jak Tatrzański, Pieniński czy
+          Babiogórski, dbają o ochronę unikalnych ekosystemów, umożliwiając
+          obserwację rzadkich gatunków w ich naturalnym środowisku. Dzięki temu
+          Karpaty są nie tylko atrakcją turystyczną, ale również miejscem
+          intensywnych badań naukowych.
+        </p>
+        <p>
+          Kultura góralska to kolejny niezwykle istotny aspekt regionu.
+          Mieszkańcy gór, znani jako górale, pielęgnują tradycje przekazywane z
+          pokolenia na pokolenie. Folklor, muzyka grana na fujarach czy
+          skrzypcach, tradycyjne tańce i stroje tworzą niepowtarzalny klimat,
+          który odzwierciedla ciężką pracę, ale i radość życia w górach.
+          Drewniane chaty, kapliczki oraz regionalne rzemiosło stanowią żywy
+          dowód na bogactwo kulturowe tych terenów.
+        </p>
+        <p>
+          Historia Karpat jest równie fascynująca. Od średniowiecznych bitew,
+          przez okres rozbiorów, aż po czasy II wojny światowej – góry te były
+          świadkiem wielu przełomowych wydarzeń. Ruiny zamków, stare warownie i
+          zabytkowe miasteczka przypominają o burzliwych dziejach regionu, a
+          legendy o śpiących rycerzach dodają mu mistycznego uroku. Wiele
+          opowieści ludowych, przekazywanych ustnie, nadaje regionowi
+          dodatkowego klimatu i sprawia, że każdy, kto odwiedza Karpaty, czuje
+          magię gór.
+        </p>
+        <p>
+          Turystyka w Karpaty rozwija się dynamicznie. Liczne szlaki
+          turystyczne, schroniska górskie, ośrodki narciarskie oraz nowoczesne
+          wyciągi umożliwiają korzystanie z atrakcji przez cały rok. Zakopane,
+          znane jako zimowa stolica Polski, jest doskonałym przykładem miasta,
+          które wykorzystało potencjał gór do rozwoju turystyki, oferując
+          atrakcje zarówno zimą, jak i latem.
+        </p>
+        <p>
+          Kulinaria regionu stanowią nieodłączny element tradycji. Lokalne
+          specjały, takie jak oscypek, bundz czy kwaśnica, przygotowywane według
+          tradycyjnych receptur, cieszą podniebienia mieszkańców i turystów.
+          Festyny, jarmarki i regionalne imprezy kulinarne umożliwiają
+          degustację tych przysmaków, wzmacniając jednocześnie poczucie
+          tożsamości góralskiej.
+        </p>
+        <p>
+          Podsumowując, Karpaty to region o niezwykłej urodzie, bogatej historii
+          i głęboko zakorzenionych tradycjach. Nowoczesność spotyka się tutaj z
+          tradycją, a natura i kultura tworzą harmonijną całość, która na zawsze
+          pozostawia niezapomniane wrażenia.
+        </p>
+        <img src="zdjecia/karpaty.jpg" alt="Karpaty" />
+        <div class="button-group">
+          <button onclick="return showPage(event, 'home')">
+            Powrót do Strony Głównej
+          </button>
+        </div>
+      </div>
+
+      <div id="sudety" class="hidden">
+        <h2>Sudety</h2>
+        <p>
+          Sudety to jedno z najstarszych pasm górskich w Europie, położone w
+          południowo-zachodniej Polsce, rozciągające się także na Czechy i
+          Niemcy. Region wyróżnia się bogatą historią geologiczną, sięgającą
+          setek milionów lat, co nadaje mu unikalny krajobraz pełen głębokich
+          dolin, stromych zboczy i niezwykłych formacji skalnych.
+        </p>
+        <p>
+          Zielone lasy, malownicze rzeki i wodospady tworzą charakterystyczny
+          pejzaż Sudetów. Liczne parki narodowe, takie jak Karkonoski Park
+          Narodowy, chronią unikalne ekosystemy, umożliwiając obserwację
+          rzadkich gatunków zwierząt – od jeleni po dzikie ptaki. Mieszkańcy
+          regionu żyją blisko natury, korzystając z dobrodziejstw górskich
+          potoków i czystej wody.
+        </p>
+        <p>
+          Historia Sudetów obfituje w liczne wydarzenia – od średniowiecznych
+          bitew, przez okres rozbiorów, aż po dramatyczne momenty II wojny
+          światowej. Imponujące zamki, takie jak Zamek Książ i Zamek Czocha,
+          oraz ruiny starych warowni świadczą o strategicznym znaczeniu tych
+          terenów. Każdy kamień opowiada o burzliwej przeszłości regionu.
+        </p>
+        <p>
+          Sporty zimowe mają ogromne znaczenie w Sudetach. Ośrodki narciarskie,
+          np. w Szklarskiej Porębie czy Karpaczu, oferują doskonałe warunki do
+          uprawiania narciarstwa, snowboardingu oraz biegów narciarskich. Zimą
+          stoki są pełne, a latem szlaki turystyczne zapraszają do pieszych
+          wędrówek i rowerowych wycieczek.
+        </p>
+        <p>
+          Kultura ludowa Sudetów jest równie bogata – tradycyjne rękodzieło,
+          muzyka i tańce ludowe są pielęgnowane przez mieszkańców, którzy
+          organizują festyny i jarmarki. Wydarzenia te nie tylko integrują
+          społeczność, ale również przyciągają turystów spragnionych
+          autentycznych doznań.
+        </p>
+        <p>
+          Podsumowując, Sudety to region, w którym historia, przyroda i kultura
+          łączą się w jedną spójną całość. Każdy, kto odwiedzi te góry, poczuje
+          ich niepowtarzalny klimat, a malownicze krajobrazy na zawsze pozostaną
+          w pamięci.
+        </p>
+        <img src="zdjecia/sudety.jpg" alt="Sudety" />
+        <div class="button-group">
+          <button onclick="return showPage(event, 'home')">
+            Powrót do Strony Głównej
+          </button>
+        </div>
+      </div>
+
+      <div id="pojezierza" class="hidden">
+        <h2>Pojezierza</h2>
+        <p>
+          Pojezierza Polski to regiony o niezwykłej urodzie, gdzie setki jezior
+          tworzą malowniczy krajobraz otoczony lasami, łąkami i pagórkami. Każde
+          jezioro ma swoją unikalną historię geologiczną, a krystalicznie czyste
+          wody są domem dla wielu gatunków ryb, roślin wodnych i ptaków. Region
+          ten stanowi idealne miejsce do wypoczynku i rekreacji.
+        </p>
+        <p>
+          Obszary takie jak Mazury, Pojezierze Drawskie i Wielkopolskie oferują
+          liczne atrakcje turystyczne – od żeglowania, kajakarstwa, po
+          wędkowanie i piesze wędrówki. Chronione parki krajobrazowe oraz
+          rezerwaty przyrody dbają o zachowanie tego cennego dziedzictwa.
+        </p>
+        <p>
+          Bogactwo kulturowe pojezierzy jest równie imponujące jak ich walory
+          przyrodnicze. Od średniowiecznych osad, przez rozwój handlu, aż po
+          nowoczesne formy turystyki – te tereny od dawna stanowią ważny punkt
+          na mapie kulturowej Polski.
+        </p>
+        <p>
+          Przyroda pojezierzy zmienia się wraz z porami roku – wiosną jeziora
+          budzą się do życia, latem lśnią w słońcu, jesienią przybierają ciepłe
+          barwy, a zimą emanują spokojem. Liczne trasy spacerowe i rowerowe
+          pozwalają na pełne zanurzenie się w tym magicznym otoczeniu.
+        </p>
+        <p>
+          Podsumowując, pojezierza Polski to region pełen harmonii, bogactwa
+          przyrodniczego i kulturowego, oferujący niezapomniane doświadczenia
+          dla każdego odwiedzającego.
+        </p>
+        <img src="zdjecia/pojezierze.jpg" alt="Pojezierza" />
+        <div class="button-group">
+          <button onclick="return showPage(event, 'home')">
+            Powrót do Strony Głównej
+          </button>
+        </div>
+      </div>
+
+      <div id="wyzyny" class="hidden">
+        <h2>Wyżyny</h2>
+        <p>
+          Wyżyny w Polsce to obszary o łagodnie falujących krajobrazach,
+          obejmujące m.in. Wyżynę Lubelską, Krakowsko-Częstochowską oraz Śląską.
+          Charakteryzują się rozległymi równinami, pagórkami i malowniczymi
+          dolinami, tworząc harmonijną przestrzeń łączącą tradycję rolniczą z
+          nowoczesnym rozwojem.
+        </p>
+        <p>
+          Historia wyżyn sięga czasów prehistorycznych, kiedy to żyzne gleby
+          sprzyjały rozwojowi osadnictwa. W średniowieczu powstawały tu liczne
+          zamki i warownie, co miało kluczowe znaczenie dla rozwoju kultury
+          ludowej.
+        </p>
+        <p>
+          Kultura regionu jest niezwykle bogata – tradycyjne rzemiosło, muzyka,
+          tańce ludowe i lokalne obyczaje stanowią integralną część tożsamości
+          mieszkańców. Festyny i jarmarki umożliwiają przekazywanie tradycji z
+          pokolenia na pokolenie.
+        </p>
+        <p>
+          Gospodarka wyżyn opiera się głównie na rolnictwie, co wpływa na
+          malowniczy krajobraz pełen pól uprawnych, sadów i winnic. Pory roku
+          nadają regionowi niepowtarzalny charakter – od wiosennego rozkwitu,
+          przez letnie dojrzewanie plonów, aż po jesienne barwy i zimowy spokój.
+        </p>
+        <p>
+          Podsumowując, wyżyny Polski to region, w którym historia, tradycja i
+          nowoczesność współistnieją, tworząc przestrzeń, która zapiera dech w
+          piersiach.
+        </p>
+        <img src="zdjecia/wyzyny.jpg" alt="Wyżyny" />
+        <div class="button-group">
+          <button onclick="return showPage(event, 'home')">
+            Powrót do Strony Głównej
+          </button>
+        </div>
+      </div>
+
+      <div id="niziny" class="hidden">
+        <h2>Niziny</h2>
+        <p>
+          Niziny Polski to rozległe tereny o niskim ukształtowaniu, stanowiące
+          serce kraju pod względem gospodarczym i kulturowym. Obszary takie jak
+          Mazowsze, Wielkopolska czy Dolny Śląsk charakteryzują się żyznymi
+          glebami, rozległymi polami uprawnymi i spokojnymi krajobrazami.
+        </p>
+        <p>
+          Krajobraz nizin to przede wszystkim łąki, pola uprawne, lasy oraz
+          malownicze rzeki, które kształtują się na przestrzeni wieków. Rzeki
+          takie jak Wisła, Odra czy Warta pełnią ważną rolę w komunikacji i
+          rozwoju miast.
+        </p>
+        <p>
+          Historia nizin jest bogata – od starożytnych osad, przez
+          średniowieczne miasta, aż po współczesne centra gospodarcze. Tradycje
+          przekazywane z pokolenia na pokolenie czynią te tereny unikalnymi.
+        </p>
+        <p>
+          Współczesne niziny to dynamiczne centra miejskie, w których nowoczesne
+          technologie i rozwinięta infrastruktura łączą się z tradycyjnym
+          rolnictwem. Rozwój przemysłu i edukacji przyczynia się do wysokiej
+          jakości życia mieszkańców.
+        </p>
+        <p>
+          Podsumowując, niziny Polski to region, gdzie natura i człowiek
+          współistnieją w harmonii, a bogactwo historyczne i kulturowe tworzy
+          niepowtarzalny klimat.
+        </p>
+        <img src="zdjecia/nizina.jpg" alt="Niziny" />
+        <div class="button-group">
+          <button onclick="return showPage(event, 'home')">
+            Powrót do Strony Głównej
+          </button>
+        </div>
+      </div>
+
+      <div id="pobrzeza" class="hidden">
+        <h2>Pobrzeża</h2>
+        <p>
+          Pobrzeża Polski to malownicze tereny wzdłuż wybrzeża Morza
+          Bałtyckiego, które łączą piękno plaż, wydm i klifów. Region ten
+          zachwyca widokiem, gdzie morskie fale spotykają się z rozległymi
+          piaszczystymi plażami, tworząc niepowtarzalną scenerię.
+        </p>
+        <p>
+          Historia pobrzeży sięga średniowiecza, kiedy to wybrzeże stanowiło
+          ważny punkt handlowy. Zabytkowe miasta, takie jak Gdańsk czy
+          Kołobrzeg, rozwijały się dzięki portom i handlowi morskiemu.
+        </p>
+        <p>
+          Przyroda pobrzeży jest niezwykle zróżnicowana – od szerokich plaż po
+          wydmy i klify. Morskie fale nieustannie kształtują brzeg, tworząc
+          dynamiczny krajobraz zmieniający się wraz z porami roku.
+        </p>
+        <p>
+          Podsumowując, pobrzeża Polski to region, który łączy historię,
+          przyrodę i kulturę morską, oferując niezapomniane wrażenia dla każdego
+          odwiedzającego.
+        </p>
+        <img src="zdjecia/pobrzeze.jpg" alt="Pobrzeża" />
+        <div class="button-group">
+          <button onclick="return showPage(event, 'home')">
+            Powrót do Strony Głównej
+          </button>
+        </div>
+      </div>
+
+      <div id="gory_swietokrzyskie" class="hidden">
+        <h2>Góry Świętokrzyskie</h2>
+        <p>
+          Góry Świętokrzyskie to jedno z najstarszych pasm górskich w Polsce,
+          pełne tajemnic i historii. Położone w centralnej Polsce, wyróżniają
+          się łagodnym, malowniczym reliefem z licznymi skałami, wzgórzami i
+          dolinami.
+        </p>
+        <p>
+          Region zachwyca różnorodnością przyrody – od stromych zboczy po
+          starożytne lasy, w których można spotkać rzadkie gatunki roślin i
+          zwierząt. Liczne szlaki turystyczne zachęcają do aktywnego wypoczynku.
+        </p>
+        <p>
+          Kultura i historia Gór Świętokrzyskich są równie fascynujące – zamki,
+          klasztory i legendy opowiadają o bogatej przeszłości tych terenów.
+        </p>
+        <p>
+          Podsumowując, Góry Świętokrzyskie to region pełen historii, przyrody i
+          kultury, który na zawsze zapada w pamięć.
+        </p>
+        <img src="zdjecia/gory_swietokrzyskie.jpeg" alt="Góry Świętokrzyskie" />
+        <div class="button-group">
+          <button onclick="return showPage(event, 'home')">
+            Powrót do Strony Głównej
+          </button>
+        </div>
+      </div>
+
+      <div id="podkarpacie" class="hidden">
+        <h2>Podkarpacie</h2>
+        <p>
+          Podkarpacie to region w południowo-wschodniej Polsce, znany z
+          malowniczych krajobrazów, bogatej historii i głęboko zakorzenionych
+          tradycji kulturowych. Obszar ten obejmuje zróżnicowane tereny – od gór
+          po doliny i lasy.
+        </p>
+        <p>
+          Kultura Podkarpacia opiera się na tradycjach przekazywanych z
+          pokolenia na pokolenie. Festyny, jarmarki i lokalne obyczaje tworzą
+          niepowtarzalny klimat regionu.
+        </p>
+        <p>
+          Historia regionu, od starożytnych osad po średniowieczne zamki,
+          świadczy o bogatej przeszłości, która wpłynęła na tożsamość
+          Podkarpacia.
+        </p>
+        <p>
+          Podsumowując, Podkarpacie to region pełen uroku, który oferuje
+          niezliczone możliwości wypoczynku i odkrywania tradycji.
+        </p>
+        <img src="zdjecia/podkarpacie.jpg" alt="Podkarpacie" />
+        <div class="button-group">
+          <button onclick="return showPage(event, 'home')">
+            Powrót do Strony Głównej
+          </button>
+        </div>
+      </div>
+
+      <div id="mazowsze" class="hidden">
+        <h2>Mazowsze</h2>
+        <p>
+          Mazowsze to historyczna kraina w centralnej Polsce, będąca sercem
+          kraju pod względem kulturowym i gospodarczym. Charakteryzuje się
+          rozległymi równinami, malowniczymi rzekami i bogatą historią.
+        </p>
+        <p>
+          Historia Mazowsza, od średniowiecznych osad po nowoczesne metropolie,
+          tworzy fascynujący obraz przemian zachodzących na tych terenach.
+        </p>
+        <p>
+          Kultura regionu, tradycyjne rzemiosło, kuchnia i obyczaje są
+          pielęgnowane przez mieszkańców, co nadaje Mazowszu wyjątkowy
+          charakter.
+        </p>
+        <p>
+          Podsumowując, Mazowsze to region łączący bogatą historię z dynamicznym
+          rozwojem współczesnym, który zachwyca zarówno mieszkańców, jak i
+          turystów.
+        </p>
+        <img src="zdjecia/mazowsze.jpg" alt="Mazowsze" />
+        <div class="button-group">
+          <button onclick="return showPage(event, 'home')">
+            Powrót do Strony Głównej
+          </button>
+        </div>
+      </div>
+
+      <div id="pomorze" class="hidden">
+        <h2>Pomorze</h2>
+        <p>
+          Pomorze to region nadmorski rozciągający się wzdłuż Morza Bałtyckiego,
+          łączący historię, kulturę morską i malownicze krajobrazy.
+          Charakterystyczne porty, urokliwe plaże, klify i wydmy tworzą
+          niepowtarzalny klimat.
+        </p>
+        <p>
+          Historia Pomorza sięga średniowiecza, a miasta takie jak Gdańsk
+          odegrały kluczową rolę w handlu morskim.
+        </p>
+        <p>
+          Podsumowując, Pomorze to region o niezwykłym bogactwie przyrodniczym,
+          historycznym i kulturowym, który dostarcza niezapomnianych wrażeń.
+        </p>
+        <img src="zdjecia/pomorze.jpg" alt="Pomorze" />
+        <div class="button-group">
+          <button onclick="return showPage(event, 'home')">
+            Powrót do Strony Głównej
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showPage(event, pageId) {
+        event.preventDefault();
+        document.querySelectorAll(".container > div").forEach(function (div) {
+          div.classList.add("hidden");
+        });
+        var page = document.getElementById(pageId);
+        if (page) {
+          page.classList.remove("hidden");
+        }
+        history.pushState(null, "", "#" + pageId);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return false;
+      }
+
+      window.addEventListener("popstate", function () {
+        var hash = window.location.hash.substring(1) || "home";
+        showPage(new Event("popstate"), hash);
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var initialPage = window.location.hash.substring(1) || "home";
+        showPage(new Event("DOMContentLoaded"), initialPage);
+      });
+    </script>
+  </body>
+</html>
